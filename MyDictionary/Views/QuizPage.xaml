@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyDictionary.Views.QuizPage"
+             xmlns:ViewModels="clr-namespace:MyDictionary.ViewModels"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Title="{Binding Title}"
+             >
+    <ContentPage.BindingContext>
+        <ViewModels:QuizViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="StartAndExpand">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="English" TextColor="DarkGray"
+                    HorizontalOptions="CenterAndExpand"/>
+                    <Switch IsToggled="{Binding SwitchEnglish}" OnColor="CornflowerBlue" ThumbColor="White" HorizontalOptions="Start">
+                        <Switch.Behaviors>
+                            <xct:EventToCommandBehavior
+                                EventName="Toggled"
+                                Command="{Binding ToggledCommand}"
+                                />
+                        </Switch.Behaviors>
+                    </Switch>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Column="1">
+                    <Label Text="ქართული" TextColor="DarkGray"
+                    HorizontalOptions="CenterAndExpand" />
+                    <Switch IsToggled="{Binding SwitchGeorgian}" OnColor="Red" ThumbColor="White">
+                        <Switch.Behaviors>
+                            <xct:EventToCommandBehavior
+                                EventName="Toggled"
+                                Command="{Binding ToggledCommand}"
+                                />
+                        </Switch.Behaviors>
+                    </Switch>
+                </StackLayout>
+            </Grid>
+            <Editor Text="{Binding WordDefinition}" FontSize="20" TextColor="Black" IsReadOnly="True"
+                   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="10,50,10,0"/>
+            <StackLayout VerticalOptions="End" Margin="0,0,0,30">
+                <Button x:Name="Btn1" Text="{Binding Word1}" HeightRequest="60" BackgroundColor="WhiteSmoke" CornerRadius="20"
+                        xct:ShadowEffect.Color="Black" xct:ShadowEffect.Radius="2"
+                        Command="{Binding CheckQuestionCommand}" CommandParameter="{x:Reference Btn1}"/>
+                <Button x:Name="Btn2" Text="{Binding Word2}" HeightRequest="60" BackgroundColor="WhiteSmoke" CornerRadius="20"
+                        xct:ShadowEffect.Color="Black" xct:ShadowEffect.Radius="2"
+                        Command="{Binding CheckQuestionCommand}" CommandParameter="{x:Reference Btn2}"/>
+                <Button x:Name="Btn3" Text="{Binding Word3}" HeightRequest="60" BackgroundColor="WhiteSmoke" CornerRadius="20"
+                        xct:ShadowEffect.Color="Black" xct:ShadowEffect.Radius="2"
+                        Command="{Binding CheckQuestionCommand}" CommandParameter="{x:Reference Btn3}"/>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
+    <!-- 
+<Editor Text="{Binding WordDefinition}" FontSize="20" TextColor="Black" IsReadOnly="True" HeightRequest="100" BackgroundColor="Gray"
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Margin="10,50,10,0"/>
+        -->

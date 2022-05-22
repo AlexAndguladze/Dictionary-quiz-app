@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodel="clr-namespace:MyDictionary.ViewModels"
+             x:DataType="viewmodel:AddEnglishWordViewModel"
+             Title="{Binding Title}"
+             x:Class="MyDictionary.Views.AddEnglishWordPage"
+             Shell.PresentationMode="Modal">
+    <ContentPage.BindingContext>
+        <viewmodel:AddEnglishWordViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Word:"
+                   Style="{StaticResource AddPageLabel}"
+                 />
+            <Entry Text="{Binding Word}"/>
+
+            <Label Padding="15">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Phonetic: " FontAttributes="Bold" FontSize="18"/>
+                        <Span Text="(Optional)" FontSize="15" TextColor="Gray" FontAttributes="Italic" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Entry Text="{Binding Phonetic}"/>
+            
+            <Label Text="Definiton:"
+                  Style="{StaticResource AddPageLabel}"
+                 />
+            <Editor Text="{Binding Definition}" VerticalOptions="FillAndExpand"/>
+
+            
+
+            <Button Padding="25"
+                    Margin="20"
+                    Command="{Binding saveCommand}"
+                    Text="Save"
+                    VerticalOptions="End"
+                    />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

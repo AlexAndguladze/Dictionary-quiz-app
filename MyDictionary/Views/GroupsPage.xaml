@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ViewModels="clr-namespace:MyDictionary.ViewModels"
+             x:Class="MyDictionary.Views.GroupsPage"
+             Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <ViewModels:GroupsViewModel/>
+    </ContentPage.BindingContext>
+    <ListView BackgroundColor="Transparent"
+              ItemsSource="{Binding WordCollections}"
+              ItemTapped="OnItemTapped"
+              HasUnevenRows="True"
+              SeparatorVisibility="None">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.ContextActions>
+                        <MenuItem Text="Edit"/>
+                        <MenuItem Text="Delete"/>
+                    </ViewCell.ContextActions>
+                    <Grid Padding="15">
+                        <Frame Padding="50" CornerRadius="30"
+                               HasShadow="True">
+                            <Label VerticalTextAlignment="Center" FontSize="40" Text="{Binding Key}"/>
+                        </Frame>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        
+        
+    </ListView>
+  
+</ContentPage>

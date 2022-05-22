@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyDictionary.Views.AddGeorgianWordPage"
+             xmlns:viewmodel="clr-namespace:MyDictionary.ViewModels"
+             x:DataType="viewmodel:AddGeorgianWordViewModel"
+             Shell.PresentationMode="Modal"
+             Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <viewmodel:AddGeorgianWordViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="სიტყვა:"
+                   Style="{StaticResource AddPageLabel}"
+                 />
+            <Entry Text="{Binding Word}"/>
+
+            <Label Text="განმარტება:"
+                   Style="{StaticResource AddPageLabel}"
+                 />
+            <Editor Text="{Binding Definition}" VerticalOptions="FillAndExpand"/>
+
+            <Button Padding="25"
+                    Margin="20"
+                    Command="{Binding saveCommand}"
+                    Text="დამატება"
+                    VerticalOptions="End"
+                    />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
