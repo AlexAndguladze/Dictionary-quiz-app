@@ -1,4 +1,4 @@
-This is my first android project with xamarin forms. Used MVVM design pattern 
+This is my first android/IOS project with xamarin forms. Used MVVM design pattern 
 (credit to James montemagno tutorials: https://youtube.com/playlist?list=PLwOF5UVsZWUiHY1CkRVjYJ6dm0iCvAlfw).
 ******APP FUNCTIONALITY AND PURPOSE******
 In this app you can save word definitions on English or Georgian. Integrated quiz will help you remember those words(I wanted to make users create their own word collections but my knowledge was limited)
