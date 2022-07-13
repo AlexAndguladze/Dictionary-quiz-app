@@ -7,8 +7,6 @@ The idea came while I was reading books on both languages and writing unknown wo
 So I decided to make an app which would help me learn new words more easily.
 \
 \
-![alt text](https://github.com/AlexAndguladze/Dictionary-quiz-app/blob/master/images/quizz%20page.jpg)
-![alt text](https://github.com/AlexAndguladze/Dictionary-quiz-app/blob/master/images/english%20words%20page.jpg)
-![alt text](https://github.com/AlexAndguladze/Dictionary-quiz-app/blob/master/images/add%20new%20word%20page.jpg)
+![alt text](https://github.com/AlexAndguladze/Dictionary-quiz-app/blob/master/images/images.png)
   
 THIS IS A PERSONAL PROJECT FOR EDUCATIONAL PURPOSES
