@@ -1,9 +1,14 @@
-This is my first android/IOS project with xamarin forms. Used MVVM design pattern 
-(credit to James montemagno tutorials: https://youtube.com/playlist?list=PLwOF5UVsZWUiHY1CkRVjYJ6dm0iCvAlfw).
-******APP FUNCTIONALITY AND PURPOSE******
-In this app you can save word definitions on English or Georgian. Integrated quiz will help you remember those words(I wanted to make users create their own word collections but my knowledge was limited)
+My first android/IOS project with xamarin forms. Used MVVM design pattern 
+(credit to James montemagno tutorials: https://youtube.com/playlist?list=PLwOF5UVsZWUiHY1CkRVjYJ6dm0iCvAlfw).  
+******APP FUNCTIONALITY AND PURPOSE******  
+In this app you can save word definitions on English or Georgian. Integrated quiz will help you remember those words(I wanted to make users create their own word collections but my knowledge was limited)  
 
 The idea came while I was reading books on both languages and writing unknown words in my notepad app which wasn't really useful because I was too lazy to read it later.
 So I decided to make an app which would help me learn new words more easily.
-
+\
+\
+![alt text](https://github.com/AlexAndguladze/Dictionary-quiz-app/blob/master/images/quizz%20page.jpg)
+![alt text](https://github.com/AlexAndguladze/Dictionary-quiz-app/blob/master/images/english%20words%20page.jpg)
+![alt text](https://github.com/AlexAndguladze/Dictionary-quiz-app/blob/master/images/add%20new%20word%20page.jpg)
+  
 THIS IS A PERSONAL PROJECT FOR EDUCATIONAL PURPOSES
